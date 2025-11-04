@@ -1,3 +1,4 @@
+const val ONE = 1.0
 const val DEFAULT_TAX_RATE = 0.1
 const val DEFAULT_TIP_PERCENTAGE = 0.15
 const val DEFAULT_DISCOUNT = 0.0
@@ -10,11 +11,11 @@ fun calculateTotalMealCost(
 ): Double {
 
     fun applyTax(cost: Double): Double {
-        return cost * (1 + taxRate)
+        return cost * (ONE + taxRate)
     }
 
     fun applyTip(costAfterTax: Double): Double {
-        return costAfterTax * (1 + tipPercentage)
+        return costAfterTax * (ONE + tipPercentage)
     }
 
     fun applyDiscount(costAfterTip: Double): Double {
